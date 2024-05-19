@@ -74,6 +74,8 @@ export function apply(ctx: Context, config: Config) {
   ctx.i18n.define('zh-CN', zhCNLocale)
   ctx.i18n.define('zh', zhCNLocale)
 
+  const blockWordLower = config.blockWords.map((v) => v.toLowerCase())
+
   ctx.command(`${name} <args:text>`).action(({ session }, arg) => {
     if (!session) return
 
@@ -81,10 +83,9 @@ export function apply(ctx: Context, config: Config) {
       return session.text('.roll-integer', [Random.int(1, 100)])
     }
 
-    for (const word of config.blockWords) {
-      if (arg.toLowerCase().includes(word.toLowerCase())) {
-        return session.text('.block-word')
-      }
+    const argLower = arg.toLowerCase()
+    for (const word of blockWordLower) {
+      if (argLower.includes(word)) return session.text('.block-word')
     }
 
     const matched = matchRegExps<string>(arg, [
