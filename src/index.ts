@@ -82,7 +82,9 @@ export function apply(ctx: Context, config: Config) {
     }
 
     for (const word of config.blockWords) {
-      if (arg.includes(word)) return session.text('.block-word')
+      if (arg.toLowerCase().includes(word.toLowerCase())) {
+        return session.text('.block-word')
+      }
     }
 
     const matched = matchRegExps<string>(arg, [
