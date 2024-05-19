@@ -123,7 +123,7 @@ export function apply(ctx: Context, config: Config) {
           ]),
       ],
       [
-        /^(?<name>.+)的?概率([是|为])?([？\?]*)?$/,
+        /^(?<name>.+?)的?概率([是|为])?([？\?]*)?$/,
         (match) =>
           session.text('.probability', [
             replaceMy(match.groups!.name),
