@@ -16,7 +16,7 @@ const defaultBlockWords = [
 ]
 export const Config: Schema<Config> = Schema.intersect([
   Schema.object({
-    blockWords: Schema.array(Schema.string()).default(defaultBlockWords),
+    blockWords: Schema.array(Schema.string()).role('table').default(defaultBlockWords),
   }),
 ]).i18n({
   'zh-CN': zhCNLocale._config,
@@ -85,7 +85,7 @@ export function apply(ctx: Context, config: Config) {
       if (arg.includes(word)) return session.text('.block-word')
     }
 
-    const res = matchRegExps<string>(arg, [
+    const matched = matchRegExps<string>(arg, [
       [
         /^(?<int>\d+)$/,
         (match) => {
@@ -97,7 +97,7 @@ export function apply(ctx: Context, config: Config) {
       [
         // 我是不是耳聋 => { prefix: '我', word: '是', type: '不', suffix: '耳聋' }
         // 我今天吃没吃 => { prefix: '我今天', word: '吃', type: '没', suffix: '' }
-        /^(?<prefix>.*)(?<word>.+)(?<type>不|没)(\k<word>)(?<suffix>.*)([呀呢啊])?([？\?！!]*)?$/,
+        /^(?<prefix>.*)(?<word>.+)(?<type>不|没)(\k<word>)(?<suffix>.*?)([呀呢啊])?([？\?！!]*)$/,
         (match) => {
           const prefix = replaceMy(match.groups!.prefix)
           const suffix = replaceMy(match.groups!.suffix)
@@ -113,7 +113,7 @@ export function apply(ctx: Context, config: Config) {
         },
       ],
       [
-        /^(?<prefix>.*)还是(?<suffix>.*)([呀呢啊])?([？\?]*)?$/,
+        /^(?<prefix>.+?)还是(?<suffix>.+?)([呀呢啊])?([？\?]*)$/,
         (match) =>
           session.text('.surely', [
             Random.pick([
@@ -123,7 +123,7 @@ export function apply(ctx: Context, config: Config) {
           ]),
       ],
       [
-        /^(?<name>.+?)的?概率([是|为])?([？\?]*)?$/,
+        /^(?<name>.+?)的?概率([是|为])?([？\?]*)$/,
         (match) =>
           session.text('.probability', [
             replaceMy(match.groups!.name),
@@ -131,7 +131,7 @@ export function apply(ctx: Context, config: Config) {
           ]),
       ],
     ])
-    if (res) return res
+    if (matched) return matched
 
     let args: string[]
     try {
@@ -145,6 +145,6 @@ export function apply(ctx: Context, config: Config) {
     if (args.length < 2) {
       return session.text('.invalid-arg')
     }
-    return Random.pick(args)
+    return session.text('.choice', [Random.pick(args)])
   })
 }

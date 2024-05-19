@@ -55,6 +55,7 @@ commands:
       i-think: 我觉得{0}
       surely: 当然是{0}喽
       probability: '{0} 的概率为：{1}%'
+      choice: 当然是{0}喽
 
 _config:
   blockWords: 屏蔽词列表
