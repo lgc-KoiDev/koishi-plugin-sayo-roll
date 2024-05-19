@@ -1,6 +1,6 @@
 {
-  "name": "koishi-plugin-template",
-  "description": "Koishi plugin template",
+  "name": "koishi-plugin-sayo-roll",
+  "description": "Another roll plugin",
   "version": "0.1.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -10,16 +10,16 @@
   ],
   "author": "student_2333 <lgc2333@126.com>",
   "license": "MIT",
-  "homepage": "https://github.com/lgc-KoiDev/koishi-plugin-template",
+  "homepage": "https://github.com/lgc-KoiDev/koishi-plugin-sayo-roll",
   "keywords": [
     "chatbot",
     "koishi",
     "plugin",
-    "template"
+    "sayo-roll"
   ],
   "koishi": {
     "description": {
-      "zh": "模板插件项目"
+      "zh": "高仿小夜 Bot 的 roll 功能（NoneBot2 插件 sayoroll Koishi 复刻版）"
     },
     "service": {
       "required": [],
@@ -32,7 +32,5 @@
   },
   "peerDependencies": {
     "koishi": "^4.17.6"
-  },
-  "devDependencies": {},
-  "dependencies": {}
+  }
 }

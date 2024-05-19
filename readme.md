@@ -10,32 +10,34 @@
   <img src="https://raw.githubusercontent.com/lgc-KoiDev/readme/master/workspace/KoishiPlugin.svg" width="240" alt="NoneBotPluginText">
 </p>
 
-# Koishi-Plugin-Template
+# Koishi-Plugin-Sayo-Roll
 
-_✨ 模板插件项目 ✨_
+_✨ 高仿小夜 Bot 的 roll 功能 ✨_
 
 <a href="./LICENSE">
-  <img src="https://img.shields.io/github/license/lgc-KoiDev/koishi-plugin-template.svg" alt="license">
+  <img src="https://img.shields.io/github/license/lgc-KoiDev/koishi-plugin-sayo-roll.svg" alt="license">
 </a>
-<a href="https://www.npmjs.com/package/koishi-plugin-template">
-  <img src="https://img.shields.io/npm/v/koishi-plugin-template" alt="pypi">
+<a href="https://www.npmjs.com/package/koishi-plugin-sayo-roll">
+  <img src="https://img.shields.io/npm/v/koishi-plugin-sayo-roll" alt="pypi">
 </a>
-<a href="https://www.npmjs.com/package/koishi-plugin-template">
-  <img src="https://img.shields.io/npm/dm/koishi-plugin-template" alt="pypi download">
+<a href="https://www.npmjs.com/package/koishi-plugin-sayo-roll">
+  <img src="https://img.shields.io/npm/dm/koishi-plugin-sayo-roll" alt="pypi download">
 </a>
-<a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/c871162c-2c6d-4a99-8de5-c8c8d7d3a0f1">
-  <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/c871162c-2c6d-4a99-8de5-c8c8d7d3a0f1.svg" alt="wakatime">
+<a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/962169b7-1180-4c4c-9d39-badbff74707f">
+  <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/962169b7-1180-4c4c-9d39-badbff74707f.svg" alt="wakatime">
 </a>
 
 </div>
 
 ## 📖 介绍
 
-如果有
+还没有
 
 ## 💡 鸣谢
 
-如果有
+### [mas-alone/nonebot-plugin-sayoroll](https://github.com/mas-alone/nonebot-plugin-sayoroll)
+
+- 借鉴的项目
 
 ## 📞 联系
 

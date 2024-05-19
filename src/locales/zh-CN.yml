@@ -1,10 +1,60 @@
 commands:
-  template:
-    description: xxx
-    options:
-      option1: xxx
+  sayo-roll:
+    description: 随机选择
+    examples: |-
+      <p>
+        sayo-roll
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.roll-integer'>
+          (随机 1~100 整数)
+        </i18n>
+      </p>
+      <p>
+        sayo-roll 10
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.roll-integer'>
+          (随机 1~10 整数)
+        </i18n>
+      </p>
+      <p>
+        sayo-roll 我是不是耳聋
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.i-think'>
+          你 (是 / 不是) 耳聋
+        </i18n>
+      </p>
+      <p>
+        sayo-roll 我今天吃没吃
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.i-think'>
+          你今天 (吃了 / 没吃){' '}
+        </i18n>
+      </p>
+      <p>
+        sayo-roll 今晚刷pp还是摆烂
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.surely'>(今晚刷pp / 摆烂)</i18n>
+      </p>
+      <p>
+        sayo-roll 吃饭 睡觉 打游戏
+        <br /> &gt; (吃饭 / 睡觉 / 打游戏)
+      </p>
+      <p>
+        sayo-roll 我今晚刷到pp的概率
+        <br /> &gt;{' '}
+        <i18n path='commands.sayo-roll.messages.probability'>
+          <>你今晚刷到pp</>
+          <>(0.01 ~ 100)</>
+        </i18n>
+      </p>
     messages:
-      message1: xxx
+      invalid-arg: 看不懂
+      number-too-small: 数字太小了！
+      block-word: 你在说什么！！！
+      roll-integer: 你的数字是 {0}
+      i-think: 我觉得{0}
+      surely: 当然是{0}喽
+      probability: '{0} 的概率为：{1}%'
 
 _config:
-  templateConfig1: xxx
+  blockWords: 屏蔽词列表
