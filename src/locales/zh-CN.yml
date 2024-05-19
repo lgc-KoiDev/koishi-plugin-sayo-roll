@@ -5,30 +5,22 @@ commands:
       <p>
         sayo-roll
         <br /> &gt;{' '}
-        <i18n path='commands.sayo-roll.messages.roll-integer'>
-          (随机 1~100 整数)
-        </i18n>
+        <i18n path='commands.sayo-roll.messages.roll-integer'>(随机 1~100 整数)</i18n>
       </p>
       <p>
         sayo-roll 10
         <br /> &gt;{' '}
-        <i18n path='commands.sayo-roll.messages.roll-integer'>
-          (随机 1~10 整数)
-        </i18n>
+        <i18n path='commands.sayo-roll.messages.roll-integer'>(随机 1~10 整数)</i18n>
       </p>
       <p>
         sayo-roll 我是不是耳聋
         <br /> &gt;{' '}
-        <i18n path='commands.sayo-roll.messages.i-think'>
-          你 (是 / 不是) 耳聋
-        </i18n>
+        <i18n path='commands.sayo-roll.messages.i-think'>你 (是 / 不是) 耳聋</i18n>
       </p>
       <p>
         sayo-roll 我今天吃没吃
         <br /> &gt;{' '}
-        <i18n path='commands.sayo-roll.messages.i-think'>
-          你今天 (吃了 / 没吃){' '}
-        </i18n>
+        <i18n path='commands.sayo-roll.messages.i-think'>你今天 (吃了 / 没吃)</i18n>
       </p>
       <p>
         sayo-roll 今晚刷pp还是摆烂
@@ -37,7 +29,8 @@ commands:
       </p>
       <p>
         sayo-roll 吃饭 睡觉 打游戏
-        <br /> &gt; (吃饭 / 睡觉 / 打游戏)
+        <br /> &gt; {' '}
+        <i18n path='commands.sayo-roll.messages.choice'>(吃饭 / 睡觉 / 打游戏)</i18n>
       </p>
       <p>
         sayo-roll 我今晚刷到pp的概率
@@ -55,7 +48,7 @@ commands:
       i-think: 我觉得{0}
       surely: 当然是{0}喽
       probability: '{0} 的概率为：{1}%'
-      choice: 当然是{0}喽
+      choice: 我选择{0}
 
 _config:
   blockWords: 屏蔽词列表
